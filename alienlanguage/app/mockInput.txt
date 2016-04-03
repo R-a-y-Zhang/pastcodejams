@@ -1,0 +1,7 @@
+3 5 4
+abc
+bca
+dac
+dbc
+cba
+
