@@ -1,0 +1,2 @@
+Complete solver, working on replacing the candidates list
+with a new list of candidates

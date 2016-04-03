@@ -25,7 +25,19 @@ class alien_dict:
 			for i in range(len(word)):
 				currentNode = currentNode.children[word[i]]
 
-			return True
+			return currentNode
 
 		except KeyError:
-			return False
+			return None
+	
+	# walk from a certain node
+	def walkFrom(self, startNode, word):
+		try:
+			currentNode = startNode
+			for i in range(len(word)):
+				currentNode = currentNode.children[word[i]]
+
+			return currentNode
+
+		except KeyError:
+			return None

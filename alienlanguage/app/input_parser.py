@@ -1,3 +1,4 @@
+# returns 2x2 array of letters
 def parse_raw(line):
 	line = line.strip()
 	parsed_input = []

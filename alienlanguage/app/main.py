@@ -1,5 +1,6 @@
 from dictionary_builder import alien_dict
 import input_parser as ip
+import solver as sv
 in_file = 'A-small-practice.in.txt'
 wordsize = 0
 dictSize = 0
@@ -24,6 +25,12 @@ cases = all_lines[2+dictSize:]
 word_graph = alien_dict(full_dict, wordsize)
 
 for i in range(len(cases)):
-	print(ip.parse_raw(cases[i]))
-	print('\n')
+	cases[i] = ip.parse_raw(cases[i])
 
+result = dict()
+
+for i in range(len(cases)):
+	result[i+1] = sv.count_words(cases[i])
+
+for key, val in result.items():
+	print('Case {}: {}'.format(key, val))
