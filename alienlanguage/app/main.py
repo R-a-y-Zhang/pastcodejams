@@ -1,7 +1,7 @@
 from dictionary_builder import alien_dict
 import input_parser as ip
 import solver as sv
-in_file = 'A-small-practice.in.txt'
+in_file = 'mockInput.txt'
 wordsize = 0
 dictSize = 0
 tests = 0
@@ -19,8 +19,8 @@ wordsize = int(params[0])
 dictSize = int(params[1])
 tests = int(params[2])
 
-full_dict = all_lines[1:2+dictSize]
-cases = all_lines[2+dictSize:]
+full_dict = all_lines[1:1+dictSize]
+cases = all_lines[1+dictSize:]
 	
 word_graph = alien_dict(full_dict, wordsize)
 
@@ -30,7 +30,7 @@ for i in range(len(cases)):
 result = dict()
 
 for i in range(len(cases)):
-	result[i+1] = sv.count_words(cases[i])
+	result[i+1] = sv.solver(word_graph, cases[i]).solve()
 
 for key, val in result.items():
 	print('Case {}: {}'.format(key, val))

@@ -4,4 +4,7 @@ bca
 dac
 dbc
 cba
-
+(ab)(bc)(ca)
+abc
+(abc)(abc)(abc)
+(zxy)bc
